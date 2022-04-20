@@ -1,3 +1,7 @@
+## 1.0.6
+
+- Testing
+
 ## 1.0.5
 
 - Fix `yarn release-*` commands

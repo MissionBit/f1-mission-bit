@@ -58,3 +58,4 @@
 
   //Set the branch that contains the stable release.
   $myUpdateChecker->setBranch('master');
+  $myUpdateChecker->getVcsApi()->enableReleaseAssets();

@@ -1,3 +1,7 @@
+## 1.0.7
+
+- Github workflow test
+
 ## 1.0.6
 
 - Testing

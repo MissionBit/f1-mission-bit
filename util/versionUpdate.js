@@ -52,8 +52,8 @@ const updateVersion = (version, releaseType) => {
 
   // first replace updates strings
   replace({
-    regex: version,
-    replacement: newVersion,
+    regex: /^Version: .*$/,
+    replacement: `Version: ${newVersion}`,
     paths: ["./style.css"],
     silent: true
   });

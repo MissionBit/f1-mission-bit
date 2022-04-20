@@ -1,3 +1,8 @@
+1.0.3
+-----
+
+- Update style.css to have the correct theme version
+
 1.0.2
 -----
 

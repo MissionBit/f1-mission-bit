@@ -1,3 +1,10 @@
+1.0.2
+-----
+
+- Remove ginger-grid
+- Replace node-sass with sass
+- Commit build dist/* files
+
 1.0.1
 -----
 

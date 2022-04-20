@@ -10,15 +10,10 @@
 // import the Sass partials in the order that you need here
 
 // vendor
-@import "./node_modules/normalize-scss/sass/normalize";
-@include normalize();
+@import "./node_modules/normalize.css/normalize";
 
 // Variables
 @import "settings/variables";
-
-// Ginger Grid
-@import "settings/ginger-settings";
-@import "./node_modules/ginger-grid/ginger";
 
 // Mixins
 @import "mixins/sugar";

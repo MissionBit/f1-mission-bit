@@ -1,3 +1,7 @@
+## 1.0.5
+
+- Fix `yarn release-*` commands
+
 ## 1.0.4
 
 - Update `yarn release-*` commands to be more robust

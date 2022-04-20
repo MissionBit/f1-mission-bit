@@ -53,7 +53,7 @@ const updateVersion = (version, releaseType) => {
 
   // first replace updates strings
   replace({
-    regex: /^Version: .*$/,
+    regex: /Version:[^\n]+/,
     replacement: `Version: ${newVersion}`,
     paths: ["./style.css"],
     silent: true
@@ -68,7 +68,7 @@ const updateVersion = (version, releaseType) => {
 
   fs.writeFileSync(
     "./CHANGES.md",
-    `## ${newVersion}\n\n${fs.readFileSync("./CHANGES.md", "utf8")}`,
+    `## ${newVersion}\n\n- \n\n${fs.readFileSync("./CHANGES.md", "utf8")}`,
     { encoding: "utf8" }
   );
 };

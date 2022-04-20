@@ -45,3 +45,16 @@
    * Load Responsive Media Options
    */
   require get_template_directory() . '/inc/responsive-media.php';
+
+  /**
+   * plugin-update-checker https://github.com/YahnisElsts/plugin-update-checker/
+   */
+  require 'plugin-update-checker/plugin-update-checker.php';
+  $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
+    'https://github.com/missionbit/f1-mission-bit/',
+    __FILE__,
+    'f1-mission-bit'
+  );
+
+  //Set the branch that contains the stable release.
+  $myUpdateChecker->setBranch('master');

@@ -5,6 +5,7 @@ const version = packageJson.version;
 const argv = require("yargs").argv;
 const colors = require("colors"); // eslint-disable-line no-unused-vars
 const replace = require("replace");
+const fs = require("fs");
 
 const updateVersion = (version, releaseType) => {
   let currentVersion = version.split(/[.]+/);
@@ -64,6 +65,12 @@ const updateVersion = (version, releaseType) => {
     paths: ["./package.json"],
     silent: true
   });
+
+  fs.writeFileSync(
+    "./CHANGES.md",
+    `## ${newVersion}\n\n${fs.readFileSync("./CHANGES.md", "utf8")}`,
+    { encoding: "utf8" }
+  );
 };
 
 updateVersion(version, argv);

@@ -1,22 +1,22 @@
-1.0.3
------
+## 1.0.4
+
+- Update `yarn release-*` commands to be more robust
+
+## 1.0.3
 
 - Update style.css to have the correct theme version
 
-1.0.2
------
+## 1.0.2
 
 - Remove ginger-grid
 - Replace node-sass with sass
 - Commit build dist/* files
 
-1.0.1
------
+## 1.0.1
 
 - Add plugin-update-checker v4.11
 - Moved to https://github.com/missionbit/f1-mission-bit
 
-1.0.0
------
+## 1.0.0
 
 - Initial release

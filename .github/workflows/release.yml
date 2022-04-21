@@ -16,3 +16,5 @@ jobs:
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "f1-mission-bit-${{ github.sha }}.zip"
+          allowUpdates: true
+          removeArtifacts: true

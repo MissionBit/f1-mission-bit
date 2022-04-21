@@ -4133,11 +4133,6 @@ gifsicle@^4.0.0:
     execa "^1.0.0"
     logalot "^2.0.0"
 
-ginger-grid@^2.3.1:
-  version "2.3.1"
-  resolved "https://registry.yarnpkg.com/ginger-grid/-/ginger-grid-2.3.1.tgz#77135d3cd825c4796c8d5dd033e1eb393384c2db"
-  integrity sha512-nKxcKzGDdrrIbmo+w+h9eWRenYa7tSYC4wlba+ywmG3QvqnKPlIYpkbq2m8ZDBLfZnUoCLFDyt3WrOsEBWYb+g==
-
 glob-parent@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/glob-parent/-/glob-parent-3.1.0.tgz#9e6af6299d8d3bd2bd40430832bd113df906c5ae"

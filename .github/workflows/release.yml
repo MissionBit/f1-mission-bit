@@ -12,7 +12,7 @@ jobs:
       contents: write
     steps:
       - uses: actions/checkout@v2
-      - run: git archive --prefix=f1-mission-bit/ --format zip -o f1-mission-bit-${{ github.sha }}.zip ${{ github.head_ref }}
+      - run: git archive --prefix=f1-mission-bit/ --format zip -o f1-mission-bit-${{ github.sha }}.zip ${{ github.sha }}
       - uses: ncipollo/release-action@v1
         with:
           artifacts: "f1-mission-bit-${{ github.sha }}.zip"

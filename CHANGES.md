@@ -1,3 +1,7 @@
+## 1.0.10
+
+- Testing update with new workflow
+
 ## 1.0.9
 
 - Github workflow test

@@ -1,6 +1,10 @@
+## 1.0.12
+
+- `cursor: pointer` updates to accordions and home hero scroll
+
 ## 1.0.11
 
-- 
+- Update from the backup, not git :facepalm:
 
 ## 1.0.10
 

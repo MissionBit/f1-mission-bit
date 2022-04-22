@@ -1,3 +1,7 @@
+## 1.0.13
+
+- Remove broken `display_custom_post_status_option` hook
+
 ## 1.0.12
 
 - `cursor: pointer` updates to accordions and home hero scroll

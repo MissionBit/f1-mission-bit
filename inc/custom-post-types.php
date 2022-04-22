@@ -197,7 +197,7 @@ function register_archived_status() {
 
 	$args = array(
 		'label'                     => _x( 'Archived', 'Status General Name', 'text_domain' ),
-		'label_count'               => _n_noop( 'Archived (%s)',  'Archived (%s)', 'text_domain' ), 
+		'label_count'               => _n_noop( 'Archived (%s)',  'Archived (%s)', 'text_domain' ),
 		'public'                    => false,
 		'show_in_admin_all_list'    => true,
 		'show_in_admin_status_list' => true,
@@ -208,40 +208,22 @@ function register_archived_status() {
 }
 add_action( 'init', 'register_archived_status', 0 );
 
-// Display Custom Post Status Option in Post Edit
-function display_custom_post_status_option(){
-  global $post;
-  $complete = '';
-  $label = '';
-  // if($post->post_type == 'post'){
-      if($post->post_status == 'archived'){
-          $selected = 'selected';
-      }
-  echo '<script>
-    jQuery(document).ready(function(){
-      jQuery(".misc-pub-section span#post-status-display").html("Archived");
-    });
-  </script>
-  ';
-  // }
-}
-add_action('admin_footer', 'display_custom_post_status_option');
-
 function my_custom_status_add_in_quick_edit() {
   echo "<script>
   jQuery(document).ready( function() {
-      jQuery( 'select[name=\"_status\"]' ).append( '<option value=\"archived\">Archived</option>' );      
-  }); 
+      jQuery( 'select[name=\"_status\"]' ).append( '<option value=\"archived\">Archived</option>' );
+  });
   </script>";
 }
 add_action('admin_footer-edit.php','my_custom_status_add_in_quick_edit');
 
 function my_custom_status_add_in_post_page() {
   echo "<script>
-  jQuery(document).ready( function() {        
+  jQuery(document).ready( function() {
       jQuery( 'select[name=\"post_status\"]' ).append( '<option value=\"archived\">Archived</option>' );
   });
   </script>";
 }
 add_action('admin_footer-post.php', 'my_custom_status_add_in_post_page');
 add_action('admin_footer-post-new.php', 'my_custom_status_add_in_post_page');
+

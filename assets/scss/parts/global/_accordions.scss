@@ -1,13 +1,13 @@
 /**
  * Accordions (Global)
- *
- * @package F1 Mission Bit
+ * 
+ * @package F1 Mission Bit 
  * @author Factor1 Studios
  * @since 0.0.1
  */
 
 .accordions-section {
-  @include iPhoneNotch;
+  @include iPhoneNotch; 
 
   .container {
     padding: rem(100) 0;
@@ -19,7 +19,7 @@
     &__header {
       color: $navy;
       overflow: auto;
-      cursor: pointer;
+      cursor: default;
       transition: all .4s ease;
 
       i {
@@ -53,7 +53,7 @@
   }
 }
 
-// Media Queries
+// Media Queries 
 @media screen and (max-width: $small-breakpoint) {
   .accordions-section .container {
     padding: rem(50) 0;

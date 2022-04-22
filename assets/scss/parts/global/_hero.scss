@@ -1,7 +1,7 @@
 /**
  * Hero (Global)
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
@@ -41,6 +41,7 @@
     border: none;
     background-color: transparent;
     appearance: none;
+    cursor: pointer;
     outline-color: $teal;
     font-size: rem(42);
     color: $white;
@@ -64,7 +65,7 @@
   }
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $medium-breakpoint) {
   .hero__scroll {
     bottom: 15%;

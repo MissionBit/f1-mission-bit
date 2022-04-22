@@ -1,3 +1,7 @@
+## 1.0.16
+
+- `cursor: pointer` updates to accordions and home hero scroll
+
 ## 1.0.15
 
 - Properly merge the develop branch :facepalm:

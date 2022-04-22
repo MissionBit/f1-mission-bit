@@ -1,3 +1,7 @@
+## 1.0.15
+
+- Properly merge the develop branch :facepalm:
+
 ## 1.0.14
 
 - Restore update checker

@@ -1,0 +1,55 @@
+/**
+ * Stats Row (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.stats-row {
+  @include iPhoneNotch;
+
+  .col-3 {
+    padding: 7% 0;
+    transition: all .4s ease;
+
+    .number {
+      transition: all .4s ease;
+    }
+
+    &:focus,
+    &:hover {
+      &:nth-of-type(4n+1) {
+        background-color: $red;
+      }
+
+      &:nth-of-type(4n+2) {
+        background-color: $teal;
+      }
+
+      &:nth-of-type(4n+3) {
+        background-color: $sky;
+      }
+
+      &:nth-of-type(4n+4) {
+        background-color: $lavender;
+      }
+
+      .number {
+        color: $navy;
+      }
+    }
+  }
+
+  // White bg 
+  &[style*="background-color: #fff"] .description {
+    color: $black;
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .stats-row .col-3 {
+    min-width: rem(250);
+  }
+}

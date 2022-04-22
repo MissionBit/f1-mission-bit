@@ -1,17 +1,16 @@
 <?php
-  /**
-   * The default blog / index template.
-   */
-  get_header();
+/**
+ * The default blog / index template.
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+ 
+get_header();
 
-  if ( have_posts() ) : while ( have_posts() ) : the_post();
+get_template_part('parts/global/hero');
 
-    the_content();
+get_template_part('parts/index/post-list');
 
-  endwhile;
-      the_posts_pagination( array('mid_size' => 2) );
-  else :
-    echo '<h2>Sorry, no posts have been found</h2>';
-  endif;
-
-  get_footer();
+get_footer(); ?>

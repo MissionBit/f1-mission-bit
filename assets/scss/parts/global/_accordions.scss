@@ -1,0 +1,61 @@
+/**
+ * Accordions (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.accordions-section {
+  @include iPhoneNotch; 
+
+  .container {
+    padding: rem(100) 0;
+  }
+
+  .accordion {
+    padding-top: rem(20);
+
+    &__header {
+      color: $navy;
+      overflow: auto;
+      cursor: default;
+      transition: all .4s ease;
+
+      i {
+        float: right;
+        margin-right: rem(5);
+        color: $navy;
+        transition: all .4s ease;
+      }
+
+      &:focus,
+      &:hover {
+        color: $teal;
+
+        i {
+          color: $teal;
+        }
+      }
+
+      &.open i {
+        transform: rotate(-180deg);
+      }
+    }
+
+    &__content {
+      display: none;
+    }
+
+    + .accordion {
+      border-top: rem(1) solid $teal;
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .accordions-section .container {
+    padding: rem(50) 0;
+  }
+}

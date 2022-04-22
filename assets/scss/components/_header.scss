@@ -1,3 +1,64 @@
 /*------------------------------------------------------------------------------
   Header
 ------------------------------------------------------------------------------*/
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  @include iPhoneNotch;
+  background-color: rgba($white, 0.74);
+  z-index: 99999;
+
+  .container {
+    padding: rem(25) 0 rem(15);
+  }
+
+  .col-12 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__logo {
+    display: inline-block;
+    width: rem(185);
+    margin-right: rem(30);
+  }
+
+  &.headroom {
+    transition: all .4s ease;
+  }
+
+  &.headroom--top {
+    background-color: rgba($white, 0.74) !important;
+  }
+
+  &.headroom--unpinned {
+    transform: translateY(-100%);
+  }
+
+  &.headroom--pinned {
+    background-color: rgba($white, 0.9);
+  }
+}
+
+.single,
+.error404 {
+  main {
+    margin-top: rem(100);
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .site-header {
+    .container {
+      padding: rem(15) 0 rem(10);
+    }
+    
+    &__logo {
+      width: rem(150);
+    }
+  }
+}

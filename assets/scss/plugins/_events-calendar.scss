@@ -1,0 +1,56 @@
+/*----------------------------------------------------------------------------
+  Events Calendar Overrides
+----------------------------------------------------------------------------*/
+a,
+button {
+  width: auto !important;
+
+  &.tribe-common-c-btn,
+  &.tribe-events-button,
+  &.tribe-events-c-subscribe-dropdown__button-text {
+    @include buttons($teal, $teal, $white);
+    margin: rem(5) !important;
+  }
+
+  &.tribe-common-h--alt,
+  &.tribe-common-c-btn-icon {
+    @include buttons($navy, $navy, $white);
+  }
+
+  &.tribe-events-c-nav__prev,
+  &.tribe-events-c-nav__next {
+    @include buttons($red, $red, $white);
+  }
+}
+
+.tribe-events-c-subscribe-dropdown__content {
+  border: rem(1) solid $teal !important;
+}
+
+.tribe-common-c-svgicon {
+  margin: rem(5);
+}
+
+.tribe-events-calendar-month__header-column-title-desktop,
+.tribe-events-calendar-month__day-date-daynum {
+  font-size: rem(24);
+}
+
+.tribe-events-c-view-selector__button {
+  -webkit-appearance: none;
+  border: none;
+  border-radius: 50%;
+  background-color: $navy;
+  color: $white;
+  transition: all .4s ease;
+  padding: rem(15) !important;
+
+  &:focus,
+  &:hover {
+    transform: translateY(-5px);
+  }
+
+  .tribe-common-c-svgicon {
+    margin: 0;
+  }
+}

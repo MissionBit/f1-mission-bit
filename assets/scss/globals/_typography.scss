@@ -1,8 +1,127 @@
 /*------------------------------------------------------------------------------
   Typography
 ------------------------------------------------------------------------------*/
+// Headings
+h1 {
+  margin: 0 0 rem(30);
+  font: normal 700 rem(60)/1.17 $sans;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+h2 {
+  margin: 0 0 rem(30);
+  font: normal 400 rem(49)/1.16 $sans;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+h3 {
+  margin: 0 0 rem(30);
+  font: normal 700 rem(40)/1.18 $sans;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+h4 {
+  margin: 0 0 rem(20);
+  font: normal 400 rem(32)/1.88 $sans;
+  color: $black;
+}
+
+h5 {
+  margin: 0 0 rem(20);
+  font: normal 700 rem(25)/1.16 $sans;
+  letter-spacing: 0.02em;
+  color: $black;
+}
+
+h6 {
+  margin: 0 0 rem(15);
+  font: normal 700 rem(20)/1.2 $sans;
+  letter-spacing: -0.01em;
+  color: $black;
+}
+
+// Body copy 
+p, ol, ul {
+  margin: 0 0 rem(30);
+}
 
 // Links
 a {
+  font: inherit;
+  color: $teal;
   text-decoration: none;
+  transition: all .4s ease;
+
+  &:focus,
+  &:hover {
+    color: $navy;
+  }
+}
+
+// Typography classes 
+.small-text { // p 
+  font-size: rem(14);
+  line-height: 2;
+}
+
+.number { // h3
+  margin-bottom: rem(5);
+  font-size: rem(64);
+  color: $teal;
+}
+
+.description { // h6
+  font-weight: 700;
+  font-size: rem(22);
+  letter-spacing: 0;
+  text-transform: uppercase;
+  color: $white;
+}
+
+.two-column-list { // ul
+  column-count: 2;
+  column-gap: rem(100);
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+
+  p {
+    line-height: 1.5;
+  }
+  
+  h1 {
+    font-size: rem(42);
+  }
+  
+  h2 {
+    font-size: rem(36);
+  }
+  
+  h3 {
+    font-size: rem(32);
+  }
+  
+  h4 {
+    font-size: rem(26);
+  }
+  
+  h5 {
+    font-size: rem(22);
+  }
+
+  .number { // h3
+    font-size: rem(42);
+  }
+
+  .description { // h6
+    font-size: rem(18);
+  }
+
+  .two-column-list { // ul
+    column-count: 1;
+  }
 }

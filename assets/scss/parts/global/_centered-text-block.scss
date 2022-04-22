@@ -1,0 +1,34 @@
+/**
+ * Centered Text Block (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.centered-text-block {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(100) 0;
+  }
+
+  .buttons {
+    margin-top: rem(30);
+  }
+}
+
+.single__meta {
+  margin-bottom: rem(30);
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .centered-text-block .container {
+    padding: rem(50) 0;
+  }
+
+  .single .centered-text-block .row {
+    justify-content: space-between;
+  }
+}

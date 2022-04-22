@@ -1,10 +1,13 @@
 <?php // Close main ?>
 </main>
 
-<footer>
+<?php // Site Footer 
+get_template_part('components/site-footer'); 
 
-</footer>
+// Modals 
+get_template_part('parts/global/modals-section');
 
-<?php wp_footer(); ?>
+wp_footer(); ?>
+
 </body>
 </html>

@@ -1,0 +1,28 @@
+/**
+ * Text Split (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.text-split {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(70) 0;
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .text-split {
+    .container {
+      padding: rem(40) 0;
+    }
+
+    .row > div + div {
+      margin-top: rem(40);
+    }
+  }
+}

@@ -1,0 +1,31 @@
+/**
+ * Staff Grid Section (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.staff-grid {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  div[class*="block-grid-"] {
+    justify-content: center;
+  }
+
+  .col {
+    margin-top: rem(20);
+    margin-bottom: rem(20);
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .staff-grid .col {
+    min-width: rem(150); 
+  }
+}

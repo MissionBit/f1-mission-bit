@@ -1,0 +1,113 @@
+/**
+ * Testimonial Block (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.testimonial-section {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  &__block {
+    position: relative;
+    padding: 8% rem(60) 3%;
+
+    &:before {
+      content: '';
+      background: url('../img/opening-quote.png') center/contain no-repeat;
+      position: absolute;
+      top: 5%;
+      left: 0;
+      width: rem(50);
+      height: rem(80);
+    }
+
+    &:after {
+      content: '';
+      background: url('../img/closing-quote.png') center/contain no-repeat;
+      position: absolute;
+      bottom: calc(5% + 70px);
+      right: 0;
+      width: rem(50);
+      height: rem(80);
+    }
+  }
+
+  * {
+    color: $white;
+  }
+
+  // Rounded corners 
+  .row:not(.row--reverse) {
+    .col-3 {
+      border-top-left-radius: rem(20);
+      border-bottom-left-radius: rem(20);
+    }
+
+    .col-7 {
+      border-top-right-radius: rem(20);
+      border-bottom-right-radius: rem(20);
+    }
+  }
+
+  .row--reverse {
+    .col-3 {
+      border-top-right-radius: rem(20);
+      border-bottom-right-radius: rem(20);
+    }
+
+    .col-7 {
+      border-top-left-radius: rem(20);
+      border-bottom-left-radius: rem(20);
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .testimonial-section {
+    .container {
+      padding: rem(25) 0;
+    }
+
+    .col-7 {
+      padding: rem(28) rem(30);
+    }
+    
+    &__block {
+      padding: 20% 0 5%;
+
+      &:before {
+        top: rem(-10);
+      }
+
+      &:after {
+        bottom: calc(5% + 15px);
+      }
+    }
+
+    * {
+      line-height: 1.5;
+    }
+
+    .col-3 {
+      border-top-left-radius: rem(20) !important;
+      border-top-right-radius: rem(20) !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      padding-bottom: 75%;
+    }
+
+    .col-7 {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: rem(20) !important;
+      border-bottom-right-radius: rem(20) !important;
+    }
+  }
+}

@@ -46,9 +46,7 @@
 
   // Customize the default read more link
   function prelude_continue_reading_link() {
-    return ' <a href="' . get_permalink() . '">' .
-     __( 'Continue reading <span class="meta-nav">&rarr;</span>', 'theme-slug' ) .
-     '</a>';
+    return '';
   }
 
   // Customize the default ellipsis (...)
@@ -113,10 +111,10 @@
 
   // Keep the WordPress Kitchen Sink Toolkit open for all users.
   function enable_more_buttons($buttons) {
-    $buttons[] = 'fontselect';
-    $buttons[] = 'fontsizeselect';
+    // $buttons[] = 'fontselect';
+    // $buttons[] = 'fontsizeselect';
     $buttons[] = 'styleselect';
-    $buttons[] = 'backcolor';
+    // $buttons[] = 'backcolor';
     $buttons[] = 'newdocument';
     $buttons[] = 'cut';
     $buttons[] = 'copy';
@@ -127,3 +125,258 @@
     return $buttons;
   }
   add_filter("mce_buttons_3", "enable_more_buttons");
+
+  // Add async defer to font awesome script
+  function add_async_attribute($tag, $handle) {
+    if ( 'font-awesome' !== $handle )
+      return $tag;
+    return str_replace( ' src', ' async="async" src', $tag );
+  }
+  add_filter('script_loader_tag', 'add_async_attribute', 10, 2);
+
+  // Hide ACF from everyone except factor1admin
+  $us = get_user_by('login', 'factor1admin');
+
+  // If the current logged-in user is not us, hide ACF
+  if( wp_get_current_user()->user_login !== $us->user_login ) :
+    add_filter('acf/settings/show_admin', '__return_false');
+  endif;
+
+  // Custom excerpt length
+  function custom_excerpt_length( $length ) {
+    return 20;
+  }
+  add_filter( 'excerpt_length', 'custom_excerpt_length', 999 );
+
+  // Display page templates in admin
+  add_filter( 'manage_pages_columns', 'page_column_views' );
+  add_action( 'manage_pages_custom_column', 'page_custom_column_views', 5, 2 );
+  function page_column_views( $defaults )
+  {
+     $defaults['page-layout'] = __('Template');
+     return $defaults;
+  }
+  function page_custom_column_views( $column_name, $id )
+  {
+     if ( $column_name === 'page-layout' ) {
+         $set_template = get_post_meta( get_the_ID(), '_wp_page_template', true );
+         if ( $set_template == 'default' ) {
+             echo 'Default';
+         }
+         $templates = get_page_templates();
+         ksort( $templates );
+         foreach ( array_keys( $templates ) as $template ) :
+             if ( $set_template == $templates[$template] ) echo $template;
+         endforeach;
+     }
+  }
+
+  // Display featured images in admin list
+  // Add the posts and pages columns filter. They both use the same function.
+  add_filter('manage_posts_columns', 'add_post_admin_thumbnail_column', 2);
+
+  // Add the column
+  function add_post_admin_thumbnail_column($columns) {
+    $columns['admin_thumb'] = __('Featured Image');
+    return $columns;
+  }
+
+  // Manage Post and Page Admin Panel Columns
+  add_action('manage_posts_custom_column', 'show_post_thumbnail_column', 5, 2);
+
+  // Get featured-thumbnail size post thumbnail and display it
+  function show_post_thumbnail_column($columns, $id) {
+    switch($columns){
+      case 'admin_thumb':
+      if( function_exists('the_post_thumbnail') ) {
+        echo the_post_thumbnail( 'admin_thumb' );
+      }
+      else
+        echo "Your theme doesn't support featured images";
+      break;
+    }
+  }
+
+  // Add custom colors to wysiwygs
+  function custom_editor_colors($init) {
+    $custom_colors = '
+        "FFC6B5", "Peach",
+        "CCB6FC", "Lavender",
+        "B6D8FC", "Sky",
+        "F1563E", "Red",
+        "3E4786", "Navy",
+        "61CABB", "Teal",
+        "212121", "Black",
+        "707070", "Steel",
+        "FFFFFF", "White",
+    ';
+
+    // build colour grid default+custom colors
+    $init['textcolor_map'] = '['.$custom_colors.']';
+
+    // change the number of rows in the grid if the number of colors changes
+    // 8 swatches per row
+    $init['textcolor_rows'] = 2;
+
+    return $init;
+  }
+  add_filter('tiny_mce_before_init', 'custom_editor_colors');
+
+  // Paste as text auto-on
+  add_filter('tiny_mce_before_init', 'ag_tinymce_paste_as_text');
+  function ag_tinymce_paste_as_text( $init ) {
+  	$init['paste_as_text'] = true;
+  	return $init;
+  }
+
+  // Add custom classes to WYSIWYGs
+  function custom_wysiwyg_options( $init_array ) {
+    $style_formats = array(
+      array(
+        'title' => 'Small Text',
+  			'block' => 'p',
+        'classes' => 'small-text',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Number',
+  			'block' => 'h3',
+        'classes' => 'number',
+  			'wrapper' => false,
+      ),
+      array(
+        'title' => 'Two-Column List',
+  			'selector' => 'ul',
+        'classes' => 'two-column-list',
+  			'wrapper' => true,
+      ),
+    );
+    // Insert the array, JSON ENCODED, into 'style_formats'
+    $init_array['style_formats_merge'] = true;
+    $init_array['style_formats'] = wp_json_encode( $style_formats );
+    return $init_array;
+  }
+  add_filter( 'tiny_mce_before_init', 'custom_wysiwyg_options' );
+
+  // Add editor styles from custom wysiwyg options
+  function custom_editor_styles() {
+    add_editor_style('/dist/editor-styles.css');
+  }
+  add_action('init', 'custom_editor_styles');
+
+  // Customize Wordpress Admin
+  // add login logo
+  function custom_loginlogo() {
+    $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo');
+
+  	echo '<style type="text/css">
+      .login {
+        font-family: "Roboto", sans-serif;
+      }
+      .login .message,
+      .login #login_error {
+        margin-top: 30px;
+        border-color: #f1563e;
+      }
+      .login p a {
+        color: #3e4786 !important;
+        transition: all .4s ease;
+      }
+      .login p a:focus,
+      .login p a:hover {
+        color: #61cabb !important;
+      }
+      .login input[type="text"]:active,
+      .login input[type="text"]:focus,
+      .login input[type="password"]:active,
+      .login input[type="password"]:focus,
+      input[type=text]:focus,
+      input[type=search]:focus,
+      input[type=radio]:focus,
+      input[type=tel]:focus,
+      input[type=time]:focus,
+      input[type=url]:focus,
+      input[type=week]:focus,
+      input[type=password]:focus,
+      input[type=checkbox]:focus,
+      input[type=color]:focus,
+      input[type=date]:focus,
+      input[type=datetime]:focus,
+      input[type=datetime-local]:focus,
+      input[type=email]:focus,
+      input[type=month]:focus,
+      input[type=number]:focus,
+      select:focus,
+      textarea:focus {
+        border-color: #61cabb;
+        box-shadow: 0 0 2px #61cabb;
+      }
+      .login input[type="submit"] {
+        background-color: #61cabb;
+        border-color: #61cabb;
+        box-shadow: 0 1px 0 #61cabb;
+        text-shadow: none;
+        transition: all .4s ease;
+      }
+      .login input[type="submit"]:focus,
+      .login input[type="submit"]:hover {
+        background-color: #3e4786;
+        border-color: #3e4786;
+        box-shadow: 0 1px 0 #3e4786;
+        color: #fff;
+      }
+    	h1 a {
+    		height: 100% !important;
+    		width:100% !important;
+    		background-image: url(' . $logo[0] . ') !important;
+    		background-postion-x: center !important;
+    		background-size:contain !important;
+    		margin-bottom:10px !important;
+      }
+    	h1 {
+    		width: 320px !important;
+    		Height: 120px !important
+      }
+  	</style>';
+  }
+  add_action('login_head', 'custom_loginlogo');
+
+  // Update login logo link
+  function custom_loginlogo_url($url) {
+    return home_url();
+  }
+  add_filter( 'login_headerurl', 'custom_loginlogo_url' );
+
+  // add custom footer text
+  function modify_footer_admin () {
+  	echo 'Created by <a href="https://factor1studios.com">factor1</a>. ';
+  	echo 'Powered by<a href="https://WordPress.org">WordPress</a>.';
+  }
+  add_filter('admin_footer_text', 'modify_footer_admin');
+
+  // Adjust queries
+  function adjust_queries($query) {
+    if( !is_admin() && (is_home() || is_category() || is_tag()) && $query->is_main_query() ) {
+
+    }
+  }
+  // add_action('pre_get_posts', 'adjust_queries');
+
+  // Remove additional css option from customizer
+  function prefix_remove_css_section( $wp_customize ) {
+  	$wp_customize->remove_section( 'custom_css' );
+  }
+  add_action( 'customize_register', 'prefix_remove_css_section', 15 );
+
+  // Remove theme/plugin editors from admin
+  define( 'DISALLOW_FILE_EDIT', true );
+
+  // Add ACF Flexible Content section titles 
+  function my_acf_fields_flexible_content_layout_title( $title, $field, $layout, $i ) {
+    // load text sub field
+    if( $text = get_sub_field('section_title') ) {
+      $title .= ': <b>' . esc_html($text) . '</b>';
+    }
+    return $title;
+  }
+  add_filter('acf/fields/flexible_content/layout_title/name=page_sections', 'my_acf_fields_flexible_content_layout_title', 10, 4);

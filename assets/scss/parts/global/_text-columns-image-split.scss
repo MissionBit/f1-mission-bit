@@ -1,0 +1,46 @@
+/**
+ * Text Columns/Image Split (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.text-columns-image-split {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(100) 0 rem(70);
+  }
+
+  &__columns {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  &__column {
+    flex: 0 1 48%;
+    margin-bottom: rem(30);
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .text-columns-image-split {
+    .container {
+      padding: rem(50) 0 rem(20);
+    }
+
+    .col-3 {
+      margin-bottom: rem(30);
+    }
+  }
+}
+
+@media screen and (max-width: rem(500)) {
+  .text-columns-image-split__column {
+    flex: 0 1 100%;
+  }
+}

@@ -1,17 +1,18 @@
 <?php
-  /**
-   * The default page template.
-   *
-   * Used when a default template individual page is queried.
-   */
-  get_header();
-?>
+/**
+ * The default page template.
+ *
+ * Used when a default template individual page is queried.
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+  
+get_header();
 
-    <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
+get_template_part('parts/global/hero');
 
-      <h1><?php the_title(); ?></h1>
-      <?php the_content(); ?>
+get_template_part('parts/global/page-sections');
 
-    <?php endwhile; endif;
-
-  get_footer();
+get_footer(); ?>

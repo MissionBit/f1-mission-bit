@@ -9,7 +9,7 @@
 
   <?php
   /* Theme color for browsers that support it
-  <meta name="theme-color" content="#000">
+  <meta name="theme-color" content="#61cabb">
   */
   ?>
 
@@ -31,12 +31,10 @@
 
   <?php if ( function_exists( 'wp_body_open' ) ) {
     wp_body_open();
-  } ?>
+  }
 
-  <?php // Header ?>
-  <header>
+  // Header
+  get_template_part('components/site-header');  
 
-  </header>
-
-  <?php // Main Content ?>
+  // Main Content ?>
   <main>

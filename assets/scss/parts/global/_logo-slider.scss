@@ -1,0 +1,35 @@
+/**
+ * Logo Slider (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.logo-slider {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(50) 0;
+  }
+
+  .slick-track {
+    display: flex !important;
+    align-items: center;
+  }
+
+  &__slide {
+    padding: rem(10) rem(20);
+
+    img {
+      display: inline-block;
+    }
+  }
+}
+
+// Media Queries
+@media screen and (max-width: $small-breakpoint) {
+  .logo-slider__slide {
+    padding: rem(10) rem(50);
+  }
+}

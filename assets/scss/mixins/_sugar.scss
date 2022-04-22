@@ -1,9 +1,8 @@
 // Sugar Mixins - mixins to make your styles a little sweeter.
+@use "sass:math";
 
 // rem size calc - converts pixel value to rem
 // Usage: `font-size: rem(24);`
-@use "sass:math";
-
 @function rem($size) {
   $remSize: math.div($size, 16);
   @return #{$remSize}rem;
@@ -16,6 +15,44 @@
     display: block;
     content: "";
     width: 100%;
-    padding-top: ($height / $width) * 100%;
+    padding-top: math.div($height, $width) * 100%;
   }
+}
+
+// Buttons
+@mixin buttons($border, $bg, $color) {
+  display: inline-block;
+  margin: rem(5);
+  padding: rem(15) rem(40);
+  border: rem(1) solid $border;
+  border-radius: rem(100);
+  background-color: $bg;
+  font: 700 rem(20)/1 $sans;
+  letter-spacing: 0.02em;
+  color: $color;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  -webkit-appearance: none;
+  transition: all .4s ease;
+
+  &:focus,
+  &:hover {
+    color: $color;
+    transform: translateY(-5px);
+  }
+
+  @media screen and (max-width: $small-breakpoint) {
+    padding: rem(15) rem(30);
+    font-size: rem(16);
+  }
+}
+
+@mixin iPhoneNotch() {
+  padding: 0 env(safe-area-inset-right) 0 env(safe-area-inset-left);
+}
+
+@keyframes bounce {
+  0%, 50%, 100% {transform: translateY(0);}
+  50% {transform: translateY(-5px);}
 }

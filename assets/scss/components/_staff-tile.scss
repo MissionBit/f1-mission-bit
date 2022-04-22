@@ -1,0 +1,48 @@
+/**
+ * Staff Tile Component
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.staff-tile {
+  &__img {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding-bottom: 100%;
+    margin-bottom: rem(20);
+    border-radius: 50%;
+    overflow: hidden;
+    transition: all .4s ease;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  h6 {
+    color: $navy;
+  }
+
+  p {
+    margin: 0;
+    line-height: 1.2;
+  }
+
+  &[data-micromodal-trigger] {
+    &:focus,
+    &:hover {
+      .staff-tile__img {
+        filter: brightness(0.9);
+        box-shadow: 0 0 rem(6) rgba($teal, 0.9);
+        transform: translateY(-5px);
+      }
+    }    
+  }
+}

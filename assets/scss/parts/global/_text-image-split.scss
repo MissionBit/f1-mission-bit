@@ -1,0 +1,78 @@
+/**
+ * Text/Image Split (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.text-image-split {
+  @include iPhoneNotch;
+
+  .container {
+    padding: rem(100) 0;
+  }
+
+  &__text {
+    padding: 20% rem(40);
+  }
+
+  // Rounded corners 
+  .row:not(.row--reverse) {
+    .col-4 {
+      border-top-left-radius: rem(20);
+      border-bottom-left-radius: rem(20);
+    }
+
+    .col-6 {
+      border-top-right-radius: rem(20);
+      border-bottom-right-radius: rem(20);
+    }
+  }
+
+  .row--reverse {
+    .col-4 {
+      border-top-right-radius: rem(20);
+      border-bottom-right-radius: rem(20);
+    }
+
+    .col-6 {
+      border-top-left-radius: rem(20);
+      border-bottom-left-radius: rem(20);
+    }
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $medium-breakpoint) {
+  .text-image-split__text {
+    padding: 15% rem(30);
+  }
+}
+
+@media screen and (max-width: $small-breakpoint) {
+  .text-image-split {
+    .container {
+      padding: rem(50) 0;
+    }
+  
+    .col-4 {
+      border-top-left-radius: rem(20) !important;
+      border-top-right-radius: rem(20) !important;
+      border-bottom-left-radius: 0 !important;
+      border-bottom-right-radius: 0 !important;
+      padding-bottom: 75%;
+    }
+
+    .col-6 {
+      border-top-left-radius: 0 !important;
+      border-top-right-radius: 0 !important;
+      border-bottom-left-radius: rem(20) !important;
+      border-bottom-right-radius: rem(20) !important;
+    }
+
+    &__text {
+      padding: 10% rem(20);
+    }
+  }
+}

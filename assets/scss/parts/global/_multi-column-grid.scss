@@ -1,0 +1,39 @@
+/**
+ * Multi-Column Grid (Global)
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.multi-column-grid {
+  @include iPhoneNotch;
+
+  .container {
+    padding-top: rem(100);
+  }
+
+  div[class*="block-grid-"] {
+    justify-content: center;
+  }
+
+  .col {
+    margin-top: rem(50);
+    margin-bottom: rem(50);
+  }
+}
+
+// Media Queries 
+@media screen and (max-width: $small-breakpoint) {
+  .multi-column-grid {
+    .container {
+      padding-top: rem(50);
+    }
+
+    .col {
+      min-width: rem(250);
+      margin-top: rem(20);
+      margin-bottom: rem(20);
+    }
+  }
+}

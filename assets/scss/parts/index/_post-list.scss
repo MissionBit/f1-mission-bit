@@ -1,0 +1,41 @@
+/**
+ * Post List
+ * 
+ * @package F1 Mission Bit 
+ * @author Factor1 Studios
+ * @since 0.0.1
+ */
+
+.post-list {
+  .text-columns-image-split:nth-of-type(even) .row {
+    flex-direction: row-reverse;
+  }
+
+  &__tax {
+    @include iPhoneNotch;
+
+    .container {
+      padding-top: rem(50);
+    }
+
+    + article .container {
+      padding-top: rem(30);
+    }
+  }
+
+  &__nav {
+    @include iPhoneNotch;
+
+    .container {
+      padding: 0 0 rem(50);
+    }
+  }
+
+  &__no-posts {
+    @include iPhoneNotch;
+
+    .container {
+      padding: rem(50) 0;
+    }
+  }
+}

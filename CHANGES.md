@@ -1,3 +1,7 @@
+## 1.1.1
+
+- Do not change text color for current selected nav-button
+
 ## 1.1.0
 
 - Merge tribe events from factor1/develop

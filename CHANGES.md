@@ -1,6 +1,6 @@
 ## 1.1.0
 
-- 
+- Merge tribe events from factor1/develop
 
 ## 1.0.16
 

@@ -1,3 +1,7 @@
+## 1.1.0
+
+- 
+
 ## 1.0.16
 
 - `cursor: pointer` updates to accordions and home hero scroll

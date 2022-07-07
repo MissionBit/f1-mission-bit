@@ -55,7 +55,8 @@ $time_title = apply_filters( 'tribe_events_single_event_time_title', __( 'Time:'
 
 $cost    = tribe_get_formatted_cost();
 $website = tribe_get_event_website_link( $event_id );
-$website_title = tribe_events_get_event_website_title() ? tribe_events_get_event_website_title() : 'Register';
+$url     = tribe_get_event_website_url( $post_id );
+$website_title = 'Register';
 ?>
 
 <div class="tribe-events-meta-group tribe-events-meta-group-details">
@@ -163,14 +164,12 @@ $website_title = tribe_events_get_event_website_title() ? tribe_events_get_event
 
 		<?php
 		// Event Website
-		if ( ! empty( $website ) ) : ?>
-
+		if ( ! empty( $url ) ) : ?>
       <div class="buttons" style="margin-top: 10px; ">
-        <a href="" class="button button--teal" title="<?php echo $website_title; ?>">
+        <a href="<?php echo $url ?>" class="button button--teal" title="<?php echo $website_title; ?>">
           <?php echo $website_title; ?>
         </a>
       </div>
-      
 		<?php endif ?>
 
 		<?php do_action( 'tribe_events_single_meta_details_section_end' ); ?>

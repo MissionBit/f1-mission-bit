@@ -1,3 +1,7 @@
+## 1.2.0
+
+- Update tribe-events register button
+
 ## 1.1.1
 
 - Do not change text color for current selected nav-button

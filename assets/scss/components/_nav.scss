@@ -169,6 +169,13 @@ nav {
         color: $teal;
       }
     }
+    .current_page_parent:not(.menu-item-home):not(.menu-item-object-page) > a,
+    .current-menu-item:not(.menu-item-home):not(.nav-button) > a {
+      color: $white;
+      &:focus, &:hover {
+        color: $teal;
+      }
+    }
 
     // Tooltip arrow
     &:before {

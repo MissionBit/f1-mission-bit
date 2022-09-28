@@ -1,3 +1,7 @@
+## 1.2.1
+
+- Update nav sub-menu
+
 ## 1.2.0
 
 - Update tribe-events register button

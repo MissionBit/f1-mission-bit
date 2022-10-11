@@ -4,8 +4,6 @@
 
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <meta property="og:title" content="<?php the_title(); ?>" />
-  <meta property="og:site_name" content="<?php bloginfo('name') ?>">
 
   <?php
   /* Theme color for browsers that support it
@@ -34,7 +32,7 @@
   }
 
   // Header
-  get_template_part('components/site-header');  
+  get_template_part('components/site-header');
 
   // Main Content ?>
   <main>

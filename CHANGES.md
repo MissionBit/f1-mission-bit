@@ -1,3 +1,7 @@
+## 1.3.0
+
+- Remove default og:site_name and og:title as AISEO should provide them
+
 ## 1.2.1
 
 - Update nav sub-menu

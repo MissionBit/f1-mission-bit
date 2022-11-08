@@ -51,13 +51,13 @@ p, ol, ul {
 // Links
 a {
   font: inherit;
-  color: $orange;
+  color: $purple;
   text-decoration: none;
   transition: all .4s ease;
 
   &:focus,
   &:hover {
-    color: $teal;
+    color: $orange;
   }
 }
 

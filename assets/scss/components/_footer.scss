@@ -3,7 +3,7 @@
 ------------------------------------------------------------------------------*/
 .site-footer {
   @include iPhoneNotch;
-  background-color: $navy;
+  background-color: $purple;
 
   .container {
     padding: rem(60) 0 rem(40);
@@ -30,7 +30,7 @@
   }
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-footer .container {
     padding: rem(40) 0 rem(10);

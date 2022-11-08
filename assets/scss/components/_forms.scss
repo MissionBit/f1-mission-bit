@@ -6,7 +6,7 @@ label {
   position: relative;
   padding-right: rem(30) !important;
   font: 400 rem(20)/1.12 $sans !important;
-  color: $steel;
+  color: $darkGrey;
   z-index: 1;
 }
 
@@ -20,7 +20,7 @@ select {
   border-bottom: rem(1) solid $black;
   background-color: transparent;
   font: 400 rem(20)/1.12 $sans !important;
-  color: $steel;
+  color: $darkGrey;
   transition: all .4s ease;
 
   &:active,
@@ -237,7 +237,7 @@ input[type="submit"] {
   // Errors
   &.gform_validation_error form {
     .gform_body ul.gform_fields li.gfield.gfield_error {
-      border-color: $red;
+      border-color: $orange;
 
       &.full-width,
       &.half-width {
@@ -245,7 +245,7 @@ input[type="submit"] {
       }
 
       label {
-        color: $red;
+        color: $orange;
       }
     }
 
@@ -255,12 +255,12 @@ input[type="submit"] {
 
     div.validation_error {
       width: 100%;
-      border-color: $red;
-      color: $red;
+      border-color: $orange;
+      color: $orange;
     }
 
     .validation_message {
-      color: $red;
+      color: $orange;
     }
   }
 }
@@ -272,12 +272,12 @@ input[type="submit"] {
     &.gform_legacy_markup_wrapper form .half-width {
       flex-basis: 100%;
     }
-    
+
     form {
       .gfield {
         margin: 0 0 rem(20) !important;
       }
-  
+
       .half-width {
         grid-column: span 12 !important;
       }

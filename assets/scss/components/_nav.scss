@@ -36,7 +36,7 @@ nav {
 
     &:focus,
     &:hover {
-      color: $teal;
+      color: $purple;
     }
   }
 
@@ -65,21 +65,21 @@ nav {
     }
 
     &.red a {
-      border: rem(1) solid $red;
-      background-color: $red;
+      border: rem(1) solid $orange;
+      background-color: $orange;
       color: $white;
     }
 
     &.navy a {
-      border: rem(1) solid $navy;
-      background-color: $navy;
+      border: rem(1) solid $purple;
+      background-color: $purple;
       color: $white;
     }
   }
 
   .current_page_parent:not(.menu-item-home):not(.menu-item-object-page) > a,
   .current-menu-item:not(.menu-item-home):not(.nav-button) > a {
-    color: $teal;
+    color: $purple;
   }
 }
 
@@ -146,17 +146,17 @@ nav {
     margin-top: rem(20);
     padding: rem(10) 0;
     border-radius: rem(5);
-    background-color: $teal;
+    background-color: $purple;
 
     > li + li {
-      border-top: rem(1) solid rgba($teal, 0.4);
+      border-top: rem(1) solid rgba($purple, 0.4);
     }
 
     li {
       flex: 0 1 100%;
 
       &.current-menu-item a {
-        color: $navy;
+        color: $purple;
       }
     }
 
@@ -166,14 +166,14 @@ nav {
       &:focus,
       &:hover {
         background-color: $white;
-        color: $teal;
+        color: $purple;
       }
     }
     .current_page_parent:not(.menu-item-home):not(.menu-item-object-page) > a,
     .current-menu-item:not(.menu-item-home):not(.nav-button) > a {
       color: $white;
       &:focus, &:hover {
-        color: $teal;
+        color: $purple;
       }
     }
 
@@ -185,7 +185,7 @@ nav {
       right: rem(10);
       border-width: rem(5);
       border-style: solid;
-      border-color: transparent transparent $teal transparent;
+      border-color: transparent transparent $purple transparent;
     }
   }
 }
@@ -282,7 +282,7 @@ nav {
 
     &:focus,
     &:hover {
-      color: $teal;
+      color: $purple;
     }
   }
 
@@ -332,14 +332,14 @@ nav {
     }
 
     &.red a {
-      border: rem(1) solid $red;
-      background-color: $red;
+      border: rem(1) solid $orange;
+      background-color: $orange;
       color: $white;
     }
 
     &.navy a {
-      border: rem(1) solid $navy;
-      background-color: $navy;
+      border: rem(1) solid $purple;
+      background-color: $purple;
       color: $white;
     }
   }

@@ -14,12 +14,12 @@ button {
 
   &.tribe-common-h--alt,
   &.tribe-common-c-btn-icon {
-    @include buttons($navy, $navy, $white);
+    @include buttons($purple, $purple, $white);
   }
 
   &.tribe-events-c-nav__prev,
   &.tribe-events-c-nav__next {
-    @include buttons($red, $red, $white);
+    @include buttons($orange, $orange, $white);
   }
 }
 
@@ -40,7 +40,7 @@ button {
   -webkit-appearance: none;
   border: none;
   border-radius: 50%;
-  background-color: $navy;
+  background-color: $purple;
   color: $white;
   transition: all .4s ease;
   padding: rem(15) !important;

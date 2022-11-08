@@ -31,7 +31,7 @@
     }
     add_action( 'after_setup_theme', 'prelude_features' );
   }
-  
+
   // Set the maximum content width for the theme
   function prelude_content_width() {
     $GLOBALS[ 'content_width' ] = apply_filters( 'prelude_content_width', 1200 );
@@ -205,7 +205,7 @@
         "B6D8FC", "Sky",
         "F1563E", "Red",
         "3E4786", "Navy",
-        "61CABB", "Teal",
+        "7BEFD3", "Teal",
         "212121", "Black",
         "707070", "Steel",
         "FFFFFF", "White",
@@ -284,7 +284,7 @@
       }
       .login p a:focus,
       .login p a:hover {
-        color: #61cabb !important;
+        color: #7BEFD3 !important;
       }
       .login input[type="text"]:active,
       .login input[type="text"]:focus,
@@ -308,13 +308,13 @@
       input[type=number]:focus,
       select:focus,
       textarea:focus {
-        border-color: #61cabb;
-        box-shadow: 0 0 2px #61cabb;
+        border-color: #7BEFD3;
+        box-shadow: 0 0 2px #7BEFD3;
       }
       .login input[type="submit"] {
-        background-color: #61cabb;
-        border-color: #61cabb;
-        box-shadow: 0 1px 0 #61cabb;
+        background-color: #7BEFD3;
+        border-color: #7BEFD3;
+        box-shadow: 0 1px 0 #7BEFD3;
         text-shadow: none;
         transition: all .4s ease;
       }
@@ -371,7 +371,7 @@
   // Remove theme/plugin editors from admin
   define( 'DISALLOW_FILE_EDIT', true );
 
-  // Add ACF Flexible Content section titles 
+  // Add ACF Flexible Content section titles
   function my_acf_fields_flexible_content_layout_title( $title, $field, $layout, $i ) {
     // load text sub field
     if( $text = get_sub_field('section_title') ) {

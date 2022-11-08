@@ -1,7 +1,7 @@
 /**
  * Staff Tile Component
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
@@ -27,7 +27,7 @@
   }
 
   h6 {
-    color: $navy;
+    color: $purple;
   }
 
   p {
@@ -43,6 +43,6 @@
         box-shadow: 0 0 rem(6) rgba($teal, 0.9);
         transform: translateY(-5px);
       }
-    }    
+    }
   }
 }

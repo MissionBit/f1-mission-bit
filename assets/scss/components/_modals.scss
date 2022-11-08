@@ -50,7 +50,7 @@
 
 .modal__close:before {
   content: '\2715'; // include backslash here for FA
-  color: $navy;
+  color: $purple;
   font-size: rem(24);
   cursor: pointer;
   transition: all .4s ease;
@@ -59,7 +59,7 @@
 .modal__content {
   h5 {
     margin-bottom: rem(5);
-    color: $navy;
+    color: $purple;
   }
 
   .staff-title {

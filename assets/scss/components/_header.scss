@@ -7,11 +7,11 @@
   left: 0;
   width: 100%;
   @include iPhoneNotch;
-  background-color: rgba($white, 0.74);
+  background-color: $white;
   z-index: 99999;
 
   .container {
-    padding: rem(25) 0 rem(15);
+    padding: rem(15) 0;
   }
 
   .col-12 {
@@ -31,7 +31,7 @@
   }
 
   &.headroom--top {
-    background-color: rgba($white, 0.74) !important;
+    background-color: $white !important;
   }
 
   &.headroom--unpinned {
@@ -50,13 +50,13 @@
   }
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .site-header {
     .container {
       padding: rem(15) 0 rem(10);
     }
-    
+
     &__logo {
       width: rem(150);
     }

@@ -12,15 +12,15 @@
   }
 
   &--red {
-    @include buttons($red, $red, $white);
+    @include buttons($orange, $orange, $white);
   }
 
   &--navy {
-    @include buttons($navy, $navy, $white);
+    @include buttons($purple, $purple, $white);
   }
 
   &--white {
-    @include buttons($white, $white, $navy);
+    @include buttons($white, $white, $purple);
   }
 
   &--white-ghost {
@@ -30,7 +30,7 @@
   &[disabled] {
     border-color: #d0d0d0;
     background-color: #d0d0d0;
-    color: $steel;
+    color: $darkGrey;
     transform: none !important;
     cursor: not-allowed;
   }

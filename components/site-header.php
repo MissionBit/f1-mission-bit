@@ -1,14 +1,15 @@
-<?php 
+<?php
 /*
  * Site Header Component
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
 
-// Site Header Custom Fields 
-$logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo'); ?>
+// Site Header Custom Fields
+// $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo');
+$logo = get_theme_file_uri('assets/img/logo-black.svg'); ?>
 
 <header class="site-header">
   <div class="container">
@@ -17,39 +18,39 @@ $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_
 
         <?php // Logo ?>
         <a href="<?php echo esc_url(home_url()); ?>" class="site-header__logo">
-          <img src="<?php echo $logo[0]; ?>" alt="<?php echo get_bloginfo('name'); ?>">
+          <img src="<?php echo $logo; ?>" alt="<?php echo get_bloginfo('name'); ?>">
         </a>
 
-        <?php // Primary menu 
-        if( has_nav_menu('primary') ) : 
+        <?php // Primary menu
+        if( has_nav_menu('primary') ) :
           wp_nav_menu(
             array(
-              'theme_location' => 'primary', 
+              'theme_location' => 'primary',
               'container' => 'nav',
               'container_class' => 'nav--primary lg-only'
             )
-          ); 
-        endif; 
-        
-        // Mobile nav button 
+          );
+        endif;
+
+        // Mobile nav button
         if( has_nav_menu('mobile') ) : ?>
 
           <button class="menu-icon" value="Menu"><span></span></button>
-        
+
         <?php endif; ?>
 
       </div>
     </div>
   </div>
 
-  <?php // Primary menu 
-  if( has_nav_menu('mobile') ) : 
+  <?php // Primary menu
+  if( has_nav_menu('mobile') ) :
     wp_nav_menu(
       array(
-        'theme_location' => 'mobile', 
+        'theme_location' => 'mobile',
         'container' => 'nav',
         'container_class' => 'nav--mobile'
       )
-    ); 
+    );
   endif; ?>
 </header>

@@ -1,3 +1,7 @@
+## 1.4.0
+
+- Update logo & colors
+
 ## 1.3.0
 
 - Remove default og:site_name and og:title as AISEO should provide them

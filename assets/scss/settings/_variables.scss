@@ -1,15 +1,26 @@
 /*----------------------------------------------------------------------------
   Variables
 ----------------------------------------------------------------------------*/
-$peach: #ffc6b5;
 $lavender: #ccb6fc;
 $sky: #b6d8fc;
-$red: #f1563e;
-$navy: #3e4786;
-$teal: #61cabb;
-$black: #212121;
-$steel: #707070;
+$orange: #F77D2B;
+$purple: #4949B4;
+$teal: #7BEFD3;
+$black: #000;
 $white: #fff;
+$lightGrey: #F7F7F7;
+$mediumGrey: #EAEAEB;
+$darkGrey: #393940;
+
+:root {
+  --mb-orange: $orange;
+  --mb-purple: $purple;
+  --mb-white: $white;
+  --mb-black: $black;
+  --mb-light-grey: $lightGrey;
+  --mb-medium-grey: $mediumGrey;
+  --mb-dark-grey: $darkGrey;
+}
 
 // Font families
-$sans: 'Roboto', sans-serif;
+$sans: 'Montserrat', sans-serif;

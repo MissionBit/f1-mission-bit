@@ -17,7 +17,7 @@
     padding-top: rem(20);
 
     &__header {
-      color: $navy;
+      color: $purple;
       overflow: auto;
       cursor: pointer;
       transition: all .4s ease;
@@ -25,7 +25,7 @@
       i {
         float: right;
         margin-right: rem(5);
-        color: $navy;
+        color: $purple;
         transition: all .4s ease;
       }
 

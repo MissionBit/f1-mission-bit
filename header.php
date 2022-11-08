@@ -7,7 +7,7 @@
 
   <?php
   /* Theme color for browsers that support it
-  <meta name="theme-color" content="#61cabb">
+  <meta name="theme-color" content="#7BEFD3">
   */
   ?>
 

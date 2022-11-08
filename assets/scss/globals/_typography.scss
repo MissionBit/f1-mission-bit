@@ -43,7 +43,7 @@ h6 {
   color: $black;
 }
 
-// Body copy 
+// Body copy
 p, ol, ul {
   margin: 0 0 rem(30);
 }
@@ -51,18 +51,18 @@ p, ol, ul {
 // Links
 a {
   font: inherit;
-  color: $teal;
+  color: $orange;
   text-decoration: none;
   transition: all .4s ease;
 
   &:focus,
   &:hover {
-    color: $navy;
+    color: $teal;
   }
 }
 
-// Typography classes 
-.small-text { // p 
+// Typography classes
+.small-text { // p
   font-size: rem(14);
   line-height: 2;
 }
@@ -86,29 +86,29 @@ a {
   column-gap: rem(100);
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $small-breakpoint) {
 
   p {
     line-height: 1.5;
   }
-  
+
   h1 {
     font-size: rem(42);
   }
-  
+
   h2 {
     font-size: rem(36);
   }
-  
+
   h3 {
     font-size: rem(32);
   }
-  
+
   h4 {
     font-size: rem(26);
   }
-  
+
   h5 {
     font-size: rem(22);
   }

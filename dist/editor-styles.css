@@ -53,7 +53,7 @@ p, ol, ul, li, blockquote {
 /* Links */
 a {
   font: inherit;
-  color: #61cabb;
+  color: #7BEFD3;
   text-decoration: none;
   transition: all .4s ease;
 }
@@ -72,7 +72,7 @@ a:hover {
 .number {
   margin-bottom: 10px;
   font-size: 64px;
-  color: #61cabb;
+  color: #7BEFD3;
 }
 
 .two-column-list {

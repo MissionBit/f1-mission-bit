@@ -9,7 +9,7 @@
 .hero {
   position: relative;
   @include iPhoneNotch;
-  background-color: $navy;
+  background-color: $purple;
   overflow: hidden;
 
   &__bg {

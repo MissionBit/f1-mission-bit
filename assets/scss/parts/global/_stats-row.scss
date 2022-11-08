@@ -1,7 +1,7 @@
 /**
  * Stats Row (Global)
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
@@ -20,7 +20,7 @@
     &:focus,
     &:hover {
       &:nth-of-type(4n+1) {
-        background-color: $red;
+        background-color: $orange;
       }
 
       &:nth-of-type(4n+2) {
@@ -36,18 +36,18 @@
       }
 
       .number {
-        color: $navy;
+        color: $purple;
       }
     }
   }
 
-  // White bg 
+  // White bg
   &[style*="background-color: #fff"] .description {
     color: $black;
   }
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .stats-row .col-3 {
     min-width: rem(250);

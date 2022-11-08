@@ -8,7 +8,7 @@
 
 .button {
   &--teal {
-    @include buttons($teal, $teal, $white);
+    @include buttons($teal, $teal, $black);
   }
 
   &--red {

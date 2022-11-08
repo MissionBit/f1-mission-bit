@@ -1,3 +1,7 @@
+## 1.5.0
+
+- Update footer & teal button colors
+
 ## 1.4.0
 
 - Update logo & colors

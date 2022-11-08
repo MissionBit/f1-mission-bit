@@ -1,3 +1,7 @@
+## 1.5.2
+
+- Update editor-styles.css
+
 ## 1.5.1
 
 - Fix CSS variables

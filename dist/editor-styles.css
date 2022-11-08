@@ -1,43 +1,43 @@
 /* Headings */
 h1 {
   margin: 0 0 30px;
-  font: normal 700 60px/1.17 'Roboto', sans-serif;
+  font: normal 700 60px/1.17 'Montserrat', sans-serif;
   letter-spacing: -0.01em;
-  color: #212121;
+  color: var(--mb-black, #000);
 }
 
 h2 {
   margin: 0 0 30px;
-  font: normal 400 49px/1.16 'Roboto', sans-serif;
+  font: normal 400 49px/1.16 'Montserrat', sans-serif;
   letter-spacing: -0.01em;
-  color: #212121;
+  color: var(--mb-black, #000);
 }
 
 h3 {
   margin: 0 0 30px;
-  font: normal 700 40px/1.18 'Roboto', sans-serif;
+  font: normal 700 40px/1.18 'Montserrat', sans-serif;
   letter-spacing: -0.01em;
-  color: #212121;
+  color: var(--mb-black, #000);
 }
 
 h4 {
   margin: 0 0 20px;
-  font: normal 400 32px/1.88 'Roboto', sans-serif;
-  color: #212121;
+  font: normal 400 32px/1.88 'Montserrat', sans-serif;
+  color: var(--mb-black, #000);
 }
 
 h5 {
   margin: 0 0 20px;
-  font: normal 700 25px/1.16 'Roboto', sans-serif;
+  font: normal 700 25px/1.16 'Montserrat', sans-serif;
   letter-spacing: 0.02em;
-  color: #212121;
+  color: var(--mb-black, #000);
 }
 
 h6 {
   margin: 0 0 15px;
-  font: normal 700 20px/1.2 'Roboto', sans-serif;
+  font: normal 700 20px/1.2 'Montserrat', sans-serif;
   letter-spacing: -0.01em;
-  color: #212121;
+  color: var(--mb-black, #000);
 }
 
 /* Body copy  */
@@ -46,21 +46,21 @@ p, ol, ul {
 }
 
 p, ol, ul, li, blockquote {
-  font: normal 400 18px/2 'Roboto', sans-serif;
-  color: #707070;
+  font: normal 400 18px/2 'Montserrat', sans-serif;
+  color: var(--mb-dark-grey, #707070);
 }
 
 /* Links */
 a {
   font: inherit;
-  color: #7BEFD3;
+  color: var(--mb-teal, #7BEFD3);
   text-decoration: none;
   transition: all .4s ease;
 }
 
 a:focus,
 a:hover {
-  color: #3e4786;
+  color: var(--mb-purple, #4949B4);
 }
 
 /* Typography classes  */
@@ -72,7 +72,7 @@ a:hover {
 .number {
   margin-bottom: 10px;
   font-size: 64px;
-  color: #7BEFD3;
+  color: var(--mb-teal, #7BEFD3);
 }
 
 .two-column-list {

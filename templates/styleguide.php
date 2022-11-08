@@ -1,8 +1,8 @@
-<?php 
+<?php
 /*
  * Template Name: Styleguide
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
@@ -18,7 +18,7 @@ get_header(); ?>
   .styleguide .bg {
     margin: 30px 0;
     padding: 30px;
-    background-color: #3e4786;
+    background-color: #4949B4;
   }
 </style>
 
@@ -49,7 +49,7 @@ get_header(); ?>
 
           <button class="button button--white-ghost">Button White (Ghost)</button>
         </div>
-        
+
         <div class="bg">
           <button class="button button--white">Button White</button>
         </div>

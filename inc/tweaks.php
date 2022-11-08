@@ -279,7 +279,7 @@
         border-color: #f1563e;
       }
       .login p a {
-        color: #3e4786 !important;
+        color: #4949B4 !important;
         transition: all .4s ease;
       }
       .login p a:focus,
@@ -320,9 +320,9 @@
       }
       .login input[type="submit"]:focus,
       .login input[type="submit"]:hover {
-        background-color: #3e4786;
-        border-color: #3e4786;
-        box-shadow: 0 1px 0 #3e4786;
+        background-color: #4949B4;
+        border-color: #4949B4;
+        box-shadow: 0 1px 0 #4949B4;
         color: #fff;
       }
     	h1 a {

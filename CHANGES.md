@@ -1,3 +1,7 @@
+## 1.5.4
+
+- Enable acf access to users other than factor1
+
 ## 1.5.3
 
 - Update editor palette

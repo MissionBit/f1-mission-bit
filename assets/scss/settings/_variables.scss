@@ -13,13 +13,13 @@ $mediumGrey: #EAEAEB;
 $darkGrey: #393940;
 
 :root {
-  --mb-orange: $orange;
-  --mb-purple: $purple;
-  --mb-white: $white;
-  --mb-black: $black;
-  --mb-light-grey: $lightGrey;
-  --mb-medium-grey: $mediumGrey;
-  --mb-dark-grey: $darkGrey;
+  --mb-orange: #{$orange};
+  --mb-purple: #{$purple};
+  --mb-white: #{$white};
+  --mb-black: #{$black};
+  --mb-light-grey: #{$lightGrey};
+  --mb-medium-grey: #{$mediumGrey};
+  --mb-dark-grey: #{$darkGrey};
 }
 
 // Font families

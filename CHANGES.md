@@ -1,3 +1,7 @@
+## 1.5.1
+
+- Fix CSS variables
+
 ## 1.5.0
 
 - Update footer & teal button colors

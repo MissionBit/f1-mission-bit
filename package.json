@@ -1,6 +1,6 @@
 {
   "name": "f1-mission-bit",
-  "version": "1.5.0",
+  "version": "1.5.1",
   "scripts": {
     "build": "yarn test && yarn format && NODE_ENV=production gulp build && yarn build-js && yarn build-scss",
     "build-js": "parcel build ./assets/js/theme.js --out-dir ./dist/ --no-content-hash --log-level 4 --public-url ./ --no-cache",

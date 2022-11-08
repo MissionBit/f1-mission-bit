@@ -199,24 +199,22 @@
 
   // Add custom colors to wysiwygs
   function custom_editor_colors($init) {
-    $custom_colors = '
-        "FFC6B5", "Peach",
-        "CCB6FC", "Lavender",
-        "B6D8FC", "Sky",
-        "F1563E", "Red",
-        "3E4786", "Navy",
-        "7BEFD3", "Teal",
-        "212121", "Black",
-        "707070", "Steel",
-        "FFFFFF", "White",
-    ';
-
     // build colour grid default+custom colors
-    $init['textcolor_map'] = '['.$custom_colors.']';
+    $custom_colors = [
+      "F77D2B", "Orange",
+      "4949B4", "Purple",
+      "7BEFD3", "Teal",
+      "000000", "Black",
+      "393940", "Dark Grey",
+      "EAEAEB", "Medium Grey",
+      "F7F7F7", "Light Grey",
+      "FFFFFF", "White",
+    ];
+    $init['textcolor_map'] = json_encode($custom_colors);
 
     // change the number of rows in the grid if the number of colors changes
     // 8 swatches per row
-    $init['textcolor_rows'] = 2;
+    $init['textcolor_rows'] = floor(count($custom_colors) / (8 * 2));
 
     return $init;
   }

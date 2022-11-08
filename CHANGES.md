@@ -1,3 +1,7 @@
+## 1.5.3
+
+- Update editor palette
+
 ## 1.5.2
 
 - Update editor-styles.css

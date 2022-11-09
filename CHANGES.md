@@ -1,3 +1,7 @@
+## 1.6.1
+
+- Update footer nav colors and width
+
 ## 1.6.0
 
 - Change branch from master to main

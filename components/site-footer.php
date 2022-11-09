@@ -8,8 +8,8 @@
  */
 
 // Site Footer Custom Fields
-// $logo = wp_get_attachment_image_src(get_field('footer_logo', 'option'), 'footer_logo');
-$logo = get_theme_file_uri('assets/img/logo-monogram-black.svg');
+$logo = wp_get_attachment_image_src(get_field('footer_logo', 'option'), 'footer_logo')[0];
+// $logo = get_theme_file_uri('assets/img/logo-monogram-black.svg');
 $contact = get_field('footer_contact', 'option');
 $socialHeadline = get_field('footer_social_menu_headline', 'option');
 $copyright = get_field('footer_copyright_text', 'option'); ?>

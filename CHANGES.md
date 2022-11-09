@@ -1,3 +1,7 @@
+## 1.5.9
+
+- Use images from Site Options
+
 ## 1.5.8
 
 - Testimonial block and login logo

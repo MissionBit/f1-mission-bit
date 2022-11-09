@@ -265,8 +265,8 @@
   // Customize Wordpress Admin
   // add login logo
   function custom_loginlogo() {
-    // $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo');
-    $logo = get_theme_file_uri('assets/img/logo-black.svg');
+    $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo')[0];
+    // $logo = get_theme_file_uri('assets/img/logo-black.svg');
 
   	echo '<style type="text/css">
       .login {

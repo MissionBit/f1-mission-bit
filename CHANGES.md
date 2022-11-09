@@ -1,3 +1,7 @@
+## 1.6.0
+
+- Change branch from master to main
+
 ## 1.5.9
 
 - Use images from Site Options

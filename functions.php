@@ -56,11 +56,11 @@
    */
   require 'plugin-update-checker/plugin-update-checker.php';
   $myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-    'https://github.com/missionbit/f1-mission-bit/',
+    'https://github.com/MissionBit/f1-mission-bit/',
     __FILE__,
     'f1-mission-bit'
   );
 
   //Set the branch that contains the stable release.
-  $myUpdateChecker->setBranch('master');
+  $myUpdateChecker->setBranch('main');
   $myUpdateChecker->getVcsApi()->enableReleaseAssets();

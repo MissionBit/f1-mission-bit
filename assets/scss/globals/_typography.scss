@@ -61,6 +61,10 @@ a {
   }
 }
 
+a.teal {
+  color: $teal;
+}
+
 // Typography classes
 .small-text { // p
   font-size: rem(14);

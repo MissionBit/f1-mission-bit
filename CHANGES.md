@@ -1,3 +1,7 @@
+## 1.5.6
+
+- Make logo 45px high
+
 ## 1.5.5
 
 - Update color names (navy -> purple, red -> orange)

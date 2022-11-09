@@ -127,8 +127,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -972,8 +972,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -1872,8 +1872,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -2008,8 +2008,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -2108,7 +2108,7 @@
                     "id": ""
                 },
                 "choices": {
-                    "#3e4786": "Navy",
+                    "#4949B4": "Purple",
                     "#fff": "White"
                 },
                 "allow_null": 0,
@@ -2267,10 +2267,10 @@
                 },
                 "choices": {
                     "#fff": "White",
-                    "#3e4786": "Navy",
+                    "#4949B4": "Purple",
                     "#b6d8fc": "Sky Blue",
-                    "#61cabb": "Teal",
-                    "#212121": "Black"
+                    "#7BEFD3": "Teal",
+                    "#000": "Black"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
@@ -2353,8 +2353,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -2454,10 +2454,10 @@
                 },
                 "choices": {
                     "#fff": "White",
-                    "#3e4786": "Navy",
+                    "#4949B4": "Purple",
                     "#b6d8fc": "Sky Blue",
-                    "#61cabb": "Teal",
-                    "#212121": "Black"
+                    "#7BEFD3": "Teal",
+                    "#000": "Black"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
@@ -2529,10 +2529,10 @@
                 },
                 "choices": {
                     "#fff": "White",
-                    "#3e4786": "Navy",
+                    "#4949B4": "Purple",
                     "#b6d8fc": "Sky Blue",
-                    "#61cabb": "Teal",
-                    "#212121": "Black"
+                    "#7BEFD3": "Teal",
+                    "#000": "Black"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
@@ -2635,8 +2635,8 @@
                 },
                 "choices": {
                     "teal": "Teal",
-                    "red": "Red",
-                    "navy": "Navy",
+                    "orange": "Orange",
+                    "purple": "Purple",
                     "white": "White",
                     "white-ghost": "White (Ghost)"
                 },
@@ -2850,8 +2850,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },
@@ -2976,8 +2976,8 @@
                     "id": ""
                 },
                 "choices": {
-                    "#3e4786": "Navy",
-                    "#61cabb": "Teal"
+                    "#4949B4": "Purple",
+                    "#7BEFD3": "Teal"
                 },
                 "allow_null": 0,
                 "other_choice": 0,
@@ -3214,8 +3214,8 @@
                         },
                         "choices": {
                             "teal": "Teal",
-                            "red": "Red",
-                            "navy": "Navy",
+                            "orange": "Orange",
+                            "purple": "Purple",
                             "white": "White",
                             "white-ghost": "White (Ghost)"
                         },

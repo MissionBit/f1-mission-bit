@@ -1,6 +1,6 @@
 ## 1.5.4
 
-- Enable acf access to users other than factor1
+- Enable acf access for all users (not just factor1)
 
 ## 1.5.3
 

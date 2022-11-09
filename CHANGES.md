@@ -1,6 +1,6 @@
 ## 1.5.8
 
-- 
+- Testimonial block and login logo
 
 ## 1.5.7
 

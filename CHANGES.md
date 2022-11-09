@@ -1,3 +1,7 @@
+## 1.5.7
+
+- Change logo display to flex
+
 ## 1.5.6
 
 - Make logo 45px high

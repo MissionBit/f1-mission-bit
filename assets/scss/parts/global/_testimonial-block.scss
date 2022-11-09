@@ -1,7 +1,7 @@
 /**
  * Testimonial Block (Global)
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
@@ -19,30 +19,34 @@
 
     &:before {
       content: '';
-      background: url('../img/opening-quote.png') center/contain no-repeat;
+      background: url('../img/opening-quote.svg') center/contain no-repeat;
       position: absolute;
       top: 5%;
       left: 0;
       width: rem(50);
-      height: rem(80);
+      height: rem(50);
     }
 
     &:after {
       content: '';
-      background: url('../img/closing-quote.png') center/contain no-repeat;
+      background: url('../img/closing-quote.svg') center/contain no-repeat;
       position: absolute;
       bottom: calc(5% + 70px);
       right: 0;
       width: rem(50);
-      height: rem(80);
+      height: rem(50);
     }
   }
 
   * {
-    color: $white;
+    color: var(--mb-white, $white);
   }
 
-  // Rounded corners 
+  div[style*="background-color: #{$teal}"] * {
+    color: $black;
+  }
+
+  // Rounded corners
   .row:not(.row--reverse) {
     .col-3 {
       border-top-left-radius: rem(20);
@@ -68,7 +72,7 @@
   }
 }
 
-// Media Queries 
+// Media Queries
 @media screen and (max-width: $small-breakpoint) {
   .testimonial-section {
     .container {
@@ -78,7 +82,7 @@
     .col-7 {
       padding: rem(28) rem(30);
     }
-    
+
     &__block {
       padding: 20% 0 5%;
 

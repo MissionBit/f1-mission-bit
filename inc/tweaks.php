@@ -265,11 +265,12 @@
   // Customize Wordpress Admin
   // add login logo
   function custom_loginlogo() {
-    $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo');
+    // $logo = wp_get_attachment_image_src(get_field('header_logo', 'option'), 'header_logo');
+    $logo = get_theme_file_uri('assets/img/logo-black.svg');
 
   	echo '<style type="text/css">
       .login {
-        font-family: "Roboto", sans-serif;
+        font-family: "Montserrat", sans-serif;
       }
       .login .message,
       .login #login_error {
@@ -326,7 +327,7 @@
     	h1 a {
     		height: 100% !important;
     		width:100% !important;
-    		background-image: url(' . $logo[0] . ') !important;
+    		background-image: url(' . $logo . ') !important;
     		background-postion-x: center !important;
     		background-size:contain !important;
     		margin-bottom:10px !important;

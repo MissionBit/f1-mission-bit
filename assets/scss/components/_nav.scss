@@ -64,13 +64,13 @@ nav {
       color: $white;
     }
 
-    &.red a {
+    &.orange a, &.red a {
       border: rem(1) solid $orange;
       background-color: $orange;
       color: $white;
     }
 
-    &.navy a {
+    &.purple a, &.navy a {
       border: rem(1) solid $purple;
       background-color: $purple;
       color: $white;
@@ -331,13 +331,13 @@ nav {
       color: $white;
     }
 
-    &.red a {
+    &.orange a, &.red a {
       border: rem(1) solid $orange;
       background-color: $orange;
       color: $white;
     }
 
-    &.navy a {
+    &.purple a, &.navy a {
       border: rem(1) solid $purple;
       background-color: $purple;
       color: $white;

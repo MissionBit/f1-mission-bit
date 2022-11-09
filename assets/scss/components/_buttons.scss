@@ -11,8 +11,16 @@
     @include buttons($teal, $teal, $black);
   }
 
+  &--orange {
+    @include buttons($orange, $orange, $white);
+  }
+
   &--red {
     @include buttons($orange, $orange, $white);
+  }
+
+  &--purple {
+    @include buttons($purple, $purple, $white);
   }
 
   &--navy {

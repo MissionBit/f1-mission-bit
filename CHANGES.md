@@ -1,3 +1,7 @@
+## 1.5.5
+
+- Update color names (navy -> purple, red -> orange)
+
 ## 1.5.4
 
 - Enable acf access for all users (not just factor1)

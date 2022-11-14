@@ -65,6 +65,10 @@
   }
 }
 
+.hero-disabled {
+  padding-top: 2rem;
+}
+
 // Media Queries
 @media screen and (max-width: $medium-breakpoint) {
   .hero__scroll {
@@ -73,6 +77,9 @@
 }
 
 @media screen and (max-width: $small-breakpoint) {
+  .hero-disabled {
+    padding-top: 0;
+  }
   .hero {
     .container {
       padding: calc(75px + 20%) 0 13%;

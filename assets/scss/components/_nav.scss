@@ -146,11 +146,11 @@ nav {
     margin-top: rem(20);
     padding: rem(10) 0;
     border-radius: rem(5);
-    background-color: $purple;
+    background-color: $white;
 
-    > li + li {
-      border-top: rem(1) solid rgba($purple, 0.4);
-    }
+    // > li + li {
+    //   border-top: rem(1) solid rgba($purple, 0.4);
+    // }
 
     li {
       flex: 0 1 100%;
@@ -171,10 +171,10 @@ nav {
     }
     .current_page_parent:not(.menu-item-home):not(.menu-item-object-page) > a,
     .current-menu-item:not(.menu-item-home):not(.nav-button) > a {
-      color: $white;
-      &:focus, &:hover {
-        color: $purple;
-      }
+      color: $purple;
+      // &:focus, &:hover {
+      //   color: $teal;
+      // }
     }
 
     // Tooltip arrow

@@ -1,3 +1,10 @@
+## 1.7.0
+
+- Update header submenu backgrounds
+- Fix accordion scrollbars
+- Add option to disable hero
+- Add option to reverse a text-split when vertical
+
 ## 1.6.1
 
 - Update footer nav colors and width

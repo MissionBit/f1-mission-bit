@@ -87,3 +87,9 @@ $row-align-content: flex-start !default;
     align-content: stretch;
   }
 }
+
+@media screen and (max-width: $small-breakpoint) {
+  .row--right-first-when-vertical > *[class*="col-"]:first-of-type {
+    order: 1;
+  }
+}

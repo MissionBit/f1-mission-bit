@@ -1,13 +1,13 @@
 <?php
 /**
  * Text Split (Global)
- * 
- * @package F1 Mission Bit 
+ *
+ * @package F1 Mission Bit
  * @author Factor1 Studios
  * @since 0.0.1
  */
 
-// Text Split Custom Fields 
+// Text Split Custom Fields
 $prefix = 'text_split_';
 $vAlign = get_sub_field($prefix . 'vertical_alignment'); // top, center
 $leftColSpan = get_sub_field($prefix . 'left_column_span'); // 3 - 9
@@ -15,18 +15,20 @@ $leftContent = get_sub_field($prefix . 'left_content');
 $leftBtnAlign = get_sub_field($prefix . 'left_button_alignment'); // left, center, right
 $rightColSpan = get_sub_field($prefix . 'right_column_span'); // 3 - 9
 $rightContent = get_sub_field($prefix . 'right_content');
-$rightBtnAlign = get_sub_field($prefix . 'right_button_alignment'); // left, center, right ?>
+$rightBtnAlign = get_sub_field($prefix . 'right_button_alignment'); // left, center, right
+$rightFirstWhenVertical = get_sub_field($prefix . 'right_first_when_vertical');
+?>
 
 <section class="text-split">
   <div class="container">
-    <div class="row row--align-items-<?php echo $vAlign; ?>">
+    <div class="row row--align-items-<?php echo $vAlign; ?> <?php echo $rightFirstWhenVertical ? 'row--right-first-when-vertical' : '' ?>">
 
       <?php // Left content ?>
       <div class="col-<?php echo $leftColSpan; ?>">
 
-        <?php echo $leftContent; 
-        
-        // Optional buttons 
+        <?php echo $leftContent;
+
+        // Optional buttons
         if( have_rows($prefix . 'left_buttons') ) : ?>
 
           <div class="buttons text-<?php echo $leftBtnAlign; ?>">
@@ -50,9 +52,9 @@ $rightBtnAlign = get_sub_field($prefix . 'right_button_alignment'); // left, cen
       <?php // Right content ?>
       <div class="col-<?php echo $rightColSpan; ?>">
 
-        <?php echo $rightContent; 
-        
-        // Optional buttons 
+        <?php echo $rightContent;
+
+        // Optional buttons
         if( have_rows($prefix . 'right_buttons') ) : ?>
 
           <div class="buttons text-<?php echo $rightBtnAlign; ?>">

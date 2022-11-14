@@ -1,3 +1,7 @@
+## 1.7.1
+
+- Change padding of hero-disabled from 2rem to 1rem
+
 ## 1.7.0
 
 - Update header submenu backgrounds
